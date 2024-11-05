@@ -13,9 +13,7 @@
     "CMAKE_PREFIX_PATH": "$(dirname $(which conda))/../",
     "FORCE_CUDA": "1"
   },
-  "runArgs": [
-    "--gpus", "all"  // 确保容器可以使用 GPU
-  ],
+  
   "mounts": [
     "source=/mmaction2,target=/mmaction2,type=bind"  // 挂载 mmaction2 项目路径到容器内
   ]
