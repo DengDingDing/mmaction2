@@ -1,13 +1,10 @@
 {
   "name": "MMAction2 Dev Container",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",  // 基于 Python 的基础镜像，适用于你的工作环境
-  "features": {
-    "python": "3.8"
-    
-  },
-  
   "build": {
-    "dockerfile": "../docker/Dockerfile"  // 使用当前目录下的 Dockerfile 文件
+    "dockerfile": "../docker/Dockerfile"  // 继续使用 ../docker/Dockerfile 文件
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
   },
   "postCreateCommand": "pip install openmim && mim install mmengine mmcv",  // 安装 MMCV 相关依赖
   "remoteEnv": {
