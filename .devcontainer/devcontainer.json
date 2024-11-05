@@ -2,8 +2,8 @@
   "name": "MMAction2 Dev Container",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",  // 基于 Python 的基础镜像，适用于你的工作环境
   "features": {
-    "python": "3.8",
-    "vscode": "latest"
+    "python": "3.8"
+    
   },
   
   "build": {
