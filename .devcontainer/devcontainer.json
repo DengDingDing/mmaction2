@@ -5,14 +5,7 @@
     "python": "3.8",
     "vscode": "latest"
   },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python",  // Python 扩展
-        "ms-toolsai.jupyter"  // Jupyter 扩展
-      ]
-    }
-  },
+  
   "build": {
     "dockerfile": "../docker/Dockerfile"  // 使用当前目录下的 Dockerfile 文件
   },
