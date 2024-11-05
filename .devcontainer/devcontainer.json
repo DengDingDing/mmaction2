@@ -14,7 +14,7 @@
     }
   },
   "build": {
-    "dockerfile": "Dockerfile"  // 使用当前目录下的 Dockerfile 文件
+    "dockerfile": "../docker/Dockerfile"  // 使用当前目录下的 Dockerfile 文件
   },
   "postCreateCommand": "pip install openmim && mim install mmengine mmcv",  // 安装 MMCV 相关依赖
   "remoteEnv": {
