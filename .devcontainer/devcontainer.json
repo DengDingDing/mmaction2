@@ -1,5 +1,32 @@
 {
-  "image": "ninja0/mmaction2",
+  "name": "MMAction2 Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",  // 基于 Python 的基础镜像，适用于你的工作环境
   "features": {
-  }
+    "python": "3.8",
+    "vscode": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",  // Python 扩展
+        "ms-toolsai.jupyter"  // Jupyter 扩展
+      ]
+    }
+  },
+  "build": {
+    "dockerfile": "Dockerfile"  // 使用当前目录下的 Dockerfile 文件
+  },
+  "postCreateCommand": "pip install openmim && mim install mmengine mmcv",  // 安装 MMCV 相关依赖
+  "remoteEnv": {
+    "TORCH_CUDA_ARCH_LIST": "6.0 6.1 7.0+PTX",
+    "TORCH_NVCC_FLAGS": "-Xfatbin -compress-all",
+    "CMAKE_PREFIX_PATH": "$(dirname $(which conda))/../",
+    "FORCE_CUDA": "1"
+  },
+  "runArgs": [
+    "--gpus", "all"  // 确保容器可以使用 GPU
+  ],
+  "mounts": [
+    "source=/mmaction2,target=/mmaction2,type=bind"  // 挂载 mmaction2 项目路径到容器内
+  ]
 }
