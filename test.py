@@ -5,6 +5,7 @@ checkpoint_path = 'https://download.openmmlab.com/mmaction/v1.0/recognition/tsn/
 img_path = 'demo/demo.mp4'   # 您可以指定自己的图片路径
 
 # 从配置文件和权重文件中构建模型
-model = init_recognizer(config_path, checkpoint_path, device="cpu")  # device 可以是 'cuda:0'
+model = init_recognizer(config_path, checkpoint_path, device="cuda:0")  # device 可以是 'cuda:0'
 # 对单个视频进行测试
 result = inference_recognizer(model, img_path)
+print(result)

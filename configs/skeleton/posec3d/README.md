@@ -8,7 +8,8 @@
 
 <!-- [ABSTRACT] -->
 
-Human skeleton, as a compact representation of human action, has received increasing attention in recent years. Many skeleton-based action recognition methods adopt graph convolutional networks (GCN) to extract features on top of human skeletons. Despite the positive results shown in previous works, GCN-based methods are subject to limitations in robustness, interoperability, and scalability. In this work, we propose PoseC3D, a new approach to skeleton-based action recognition, which relies on a 3D heatmap stack instead of a graph sequence as the base representation of human skeletons. Compared to GCN-based methods, PoseC3D is more effective in learning spatiotemporal features, more robust against pose estimation noises, and generalizes better in cross-dataset settings. Also, PoseC3D can handle multiple-person scenarios without additional computation cost, and its features can be easily integrated with other modalities at early fusion stages, which provides a great design space to further boost the performance. On four challenging datasets, PoseC3D consistently obtains superior performance, when used alone on skeletons and in combination with the RGB modality.
+
+人体骨骼作为人类行为的紧凑表征，近年来受到越来越多的关注。许多基于骨架的动作识别方法采用图卷积网络（GCN）来提取人体骨架上的特征。尽管之前的工作取得了积极的成果，但基于 GCN 的方法在鲁棒性、互操作性和可扩展性方面仍受到限制。在这项工作中，我们提出了 PoseC3D，一种基于骨架的动作识别的新方法，它依赖 3D 热图堆栈而不是图形序列作为人体骨骼的基本表示。与基于 GCN 的方法相比，PoseC3D 在学习时空特征方面更有效，对姿态估计噪声更鲁棒，并且在跨数据集设置中具有更好的泛化能力。此外，PoseC3D可以处理多人场景，无需额外的计算成本，并且其功能可以在早期融合阶段轻松地与其他模式集成，这为进一步提升性能提供了巨大的设计空间。在四个具有挑战性的数据集上，单独用于骨骼以及与 RGB 模态结合使用时，PoseC3D 始终获得卓越的性能。
 
 <!-- [IMAGE] -->
 
